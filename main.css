@@ -1,0 +1,658 @@
+@import url('https://fonts.googleapis.com/css2?family=Bitter:wght@300&family=Montserrat:wght@300;600&family=Quicksand:wght@400;600&family=Rampart+One&family=Rubik+Iso&family=Shantell+Sans:ital,wght@1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=League+Spartan:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=League+Spartan:wght@400;700&family=Monoton&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Quicksand', 'Bitter', 'Montserrat', sans-serif;
+    outline: none; border: none;
+    text-decoration: none;
+    text-transform: all .2s linear;
+}
+
+body,
+html{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+body{
+    font-size: 12px;
+    color: #424242;
+    align-items: center;
+}
+
+/*
+  AppBar
+*/
+
+header{
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background-color: #253E45;
+}
+
+.app-bar {
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    width: 100%;
+    padding: 8px 16px;
+    background-color: white;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    gap: 10px;
+    position: sticky;
+    top: 0;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+    background-color: #253E45;
+}
+
+.app-bar .app-bar__menu {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    font-weight: 600;
+    font-size: 15px;
+    text-transform: uppercase;
+}
+
+.app-bar .app-bar__menu button {
+    background-color: transparent;
+    border: none;
+    font-size: 20px;
+    padding: 12px;
+    cursor: pointer;
+    color: white;
+    margin-left: -10px;
+}
+
+.app-bar .app-bar__brand {
+    display: flex;
+    align-items: center;
+}
+
+.app-bar .app-bar__brand h1 {
+    width: 100%;
+    color: rgb(245, 239, 239);
+    padding: 10px;
+    text-transform: uppercase;
+    font-size: 22px;
+    user-select: none;
+}
+
+.app-bar .bar-nav {
+    position: absolute;
+    top: 67px;
+    left: -180px;
+    width: 150px;
+    transition: all 0.3s;
+    padding: 10px;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+}
+  
+.app-bar .bar-nav.open {
+    padding-top: 30px;
+    left: 0;
+    background-color: #f1f1f1ab;
+    text-align: center;
+    width: 100%;
+    
+}
+
+.app-bar .bar-nav.close{
+    background-color: #253E45;
+    
+}
+
+.app-bar .bar-nav.open ul li a{
+    color: #253E45;
+    font-weight: bold;
+}
+  
+.app-bar .bar-nav ul li a {
+    display: inline-block;
+    text-decoration: none;
+    color: rgb(245, 239, 239);
+    padding: 10px;
+    margin-bottom: 5px;
+    width: 100%;
+    font-size: 17px;
+    font-weight: 600;
+    text-transform: uppercase;
+    align-items: center;
+    justify-content: space-between;
+}
+  
+.app-bar .bar-nav ul li a:hover {
+    color: rgb(250, 253, 43);
+    font-weight: 800;
+}
+
+/*
+    JUMBOTRAN
+*/
+
+.hero {
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url('../public/image/header.jpg');
+    display: flex;
+    align-items: center;
+    min-height: 70vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+}
+  
+.hero__inner {
+    margin: 0 auto;
+    max-width: 800px;
+}
+
+.hero__title {
+    color: #ffffff;
+    font-family: 'Rampart One', 'Shantell Sans', 'Quicksand', sans-serif;
+    font-weight: 800;
+    text-shadow: 1px 1px #253E45;
+}
+
+.hero__subtitle {
+    color: #fff;
+    font-family: 'Rampart One', 'Shantell Sans', 'Quicksand', sans-serif;
+    margin-top: 16px;
+    padding: 8px;
+    font-weight: 600;
+    text-shadow: 1px 1px #253E45;
+}
+
+/*
+MAIN
+*/
+
+main{
+    max-width: 1200px;
+    width: 90%;
+    margin-inline: auto;
+    padding: 2rem 4rem;
+    align-items: center;
+}
+
+main .content .information{
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+}
+
+main .content .information .content-description{
+    flex: 1 1 1;
+}
+
+main .content .information .content-description .title{
+    font-size: 25px;
+    margin-block: 1rem;
+    border-bottom: .2rem solid rgb(6, 88, 13);
+}
+
+main .content .information .content-description p {
+    line-height: 1.7rem;
+    font-size: 20px;
+}
+
+main .content .information .content-image {
+    flex: 1 1 1;
+    display: flex;
+}
+   
+main .content .information .content-image img {
+    margin: auto;
+    min-width: 250px;
+    width: 300px;
+}
+
+.content{
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+.content h2{
+    font-family: 'Rampart One', 'Shantell Sans', 'Quicksand', sans-serif;
+    font-size: 6em;
+    color: #253E45;
+}
+
+/*
+    DETAIL WISATA
+*/
+.imgdetail{
+    height: 650px;
+    width: 600px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    box-shadow: 5px 10px 15px rgba(0, 0, 0, 0.25);
+}
+.detailDestination {
+    display: flex;
+    background-color: #F0EDD4;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    color: #000;
+}
+.detailinfo {
+    margin-left: 30px;
+}
+.detailinfo h1 {
+    font-size: 60px;
+    margin-top: 10px;
+    font-weight: 700;
+    line-height: 70px;
+}
+.isidetail {
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 20px;
+    margin-top: 10px;
+    justify-content: center;
+    padding: 20px;
+}
+.detailinfo h4 {
+    text-align: center;
+    text-decoration: none;
+    margin-top: 120px;
+    margin-bottom: 10px;
+    font-size: 24px;
+    line-height: 24px;
+    font-weight: 600;
+}
+.alamatdetail {
+    font-weight: 200;
+    font-size: 15px;
+    line-height: 15px;
+    text-align: center;
+}
+.tiket {
+    font-style: normal;
+    font-weight: 550;
+    font-size: 20px;
+    margin-top: 15px;
+    line-height: 25px;
+    text-align: center;
+}
+.waktu {
+    font-style: normal;
+    font-weight: 550;
+    font-size: 20px;
+    line-height: 25px;
+    text-align: center;
+}
+
+
+/*Penginapan*/
+.imgpenginapan {
+    width: 100%;
+    display: flex;
+    padding: 15px;
+    position: relative;
+    border-radius: 20px;
+}
+.penginapan {
+    position: relative;
+    background-color: #253E45;
+    justify-content: center;
+    text-align: center;
+    box-shadow: 10px 4px 4px rgba(0, 0, 0, 0.25);
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+.penginapan h3 {
+    font-size: 15px;
+    justify-content: center;
+    text-align: center;
+    text-decoration: none;
+    color: #F0EDD4;
+    margin: 10px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+.penginapan a {
+    color: #e9e0e0;
+}
+.penginapan p {
+    color: #e9e0e0;
+    margin-bottom: 5px;
+}
+
+/*CONTENT WISATA
+*/
+
+.content-wisata{
+    padding-top: 30px;
+    padding-bottom: 50px;
+    align-items: center;
+    justify-content: center;
+}
+.content-wisata .title h1{
+    font-family: 'Rampart One', 'Shantell Sans', 'Quicksand', sans-serif;
+    font-size: 3em;
+    color: #253E45;
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+.content-wisata .content h1{
+    font-size: 42px;
+    color: #253E45;
+    font-family: 'Rampart One', 'Shantell Sans', 'Quicksand', sans-serif;
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+.content-wisata .content img{
+    max-width: 320px;
+    border: 3px solid white;
+    border-radius: 10px;
+    margin-right: 15px;
+}
+.content-wisata .list{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.content-wisata .content button {
+    top: 30px;
+    width: 200px;
+    height: 40px;
+    background-color: #253E45;
+    border-radius: 10px;
+}
+.content-wisata .content{
+    padding-top: 30px;
+    
+}
+.content-wisata .content button a {
+    color: rgb(250, 253, 43);
+    font-size: 1.4em;
+}
+
+.card {
+    position: relative;
+    width: 280px;
+    height: 220px;
+    margin: 20px;
+}
+
+.card .face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.card .front {
+    transform: perspective(600px) rotateY(0deg);
+    box-shadow: 0 5px 10px #000;
+}
+
+.card .front img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card .front h3 {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 45px;
+    line-height: 45px;
+    color: #fff;
+    background: rgba(0,0,0,.4);
+    text-align: center;
+}
+
+.card .back {
+    transform: perspective(600px) rotateY(180deg);
+    background: rgb(3, 35, 54);
+    padding: 10px;
+    color: #f3f3f3;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    box-shadow: 0 5px 10px #000;
+}
+
+.card .back .link {
+    border-top: solid 1px #f3f3f3;
+    height: 50px;
+    line-height: 50px;
+}
+
+.card .back .link a {
+    color: #f3f3f3;
+}
+
+.card .back h3 {
+    font-size: 20px;
+    margin-top: 5px;
+    letter-spacing: 2px;
+}
+
+.card .back p {
+    letter-spacing: 1px;
+    font-size: 9px;
+} 
+
+.card:hover .front {
+    transform: perspective(600px) rotateY(180deg);
+}
+
+.card:hover .back {
+    transform: perspective(600px) rotateY(360deg);
+}
+
+/*
+    ABOUT US
+*/
+
+.about-us{
+    width: 100%;
+    height: 100%;
+}
+.about-us .inner-we-do{
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    /* background: rgb(218,145,0); */
+}
+
+.about-us .inner-we-do h1{
+    font-family: 'Rampart One', 'Shantell Sans', 'Quicksand', sans-serif;
+    flex: 1 1 45rem;
+    text-align: center;
+    font-size: 4.5em;
+    color: #253E45;
+}
+.inner-we-do img{
+    width: 50%;
+}
+  
+.about-us .inner-we-do p{
+    font-family: 'Quicksand','Rampart One', 'Shantell Sans', sans-serif;
+    color: black;
+    font-size: 1.5rem;
+    padding: 1rem 0;
+    margin-bottom: 25px;
+    text-align: justify;
+    /* font-weight: 500; */
+}
+
+.about-us section {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.row {
+    display: grid;
+    grid-row-gap: 12px;
+}
+
+.teamTitle h1{
+    font-family: 'Rampart One', 'Shantell Sans', 'Quicksand', sans-serif;
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 4.5em;
+    color: #253E45;
+}
+
+.column {
+    flex: 0 0 33.33%;
+    max-width: 33.33%;
+    padding: 1em;
+}
+
+.card2{
+    height: 280px;
+    width: 210px;
+    justify-content: center;
+    box-shadow: 4px 10px 7px rgba(68, 52, 88, 0.1);
+    border-radius: 30px;
+    color: #1f003b;
+    cursor: pointer;
+    transition: 0.3s;
+    background-color: #e9e0e0;
+    padding: 5em 1em;
+}
+.card2 .img-container{
+    width: 9em;
+    height: 9em;
+    background-color: #a993ff;
+    padding: 0.5em;
+    border-radius: 50%;
+    margin: 0 auto 2em auto;
+    margin-top: -40px;
+}
+.card2 img {
+    width: 100%;
+    border-radius: 50%;
+}
+.about-us .row .column .card2 h3{
+    font-family: 'Quicksand', 'Bitter', 'Montserrat', sans-serif;
+    font-weight: 800;
+    font-size: 20px;
+}
+.card2 p {
+    font-weight: 900;
+    letter-spacing: 2px;
+    font-family: 'Quicksand','Poppins', sans-serif;
+    color: #777;
+    margin-bottom: 15px;
+}
+.icons{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 10px;
+    border-top: 5px solid rgba(241, 10, 10, 0.1);
+    font-size: 35px;
+    margin-bottom: -40px;
+}
+  
+.card2 a {
+    text-decoration: none;
+    color: inherit;
+    font-size: 1.0em;
+}
+.card2:hover {
+    background: #253E45;
+    color: #ffffff;
+}
+.card2:hover .img-container {
+    transform: scale(1.2);
+}
+
+
+
+
+/*
+FOOTER
+*/
+
+.footer {
+    background-color: #253E45;
+    color: #fff;
+    width: 100%;
+    align-items: center;
+    margin-inline: auto;
+    padding: 2rem 6.7rem;
+}
+
+.footer .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+}
+
+.footer .box-container .box h3 {
+    color: var(--white);
+    font-size: 16px;
+    padding-bottom: 1rem;
+}
+
+.footer .box-container .box a {
+    color: var(--light-white);
+    font-size: 14px;
+    padding-bottom: 0.5rem;
+    display: block;
+}
+
+.footer .box-container .box a i {
+    color: var(--main-color);
+    padding-right: .5rem;
+    transition: .2s linear;
+}
+
+.footer .box-container .box a:hover i {
+    padding-right: 2rem;
+}
+
+.footer .credit {
+    text-align: center;
+    padding-top: 2rem;
+    margin-top: .5rem;
+    border-top: .1rem solid rgb(250, 253, 43);
+    font-size: 1.2rem;
+    color: var(--white);
+}
+
+.footer .credit span {
+    color: rgb(250, 253, 43);
+}
+
+/*
+    DETAIL WISATA
+*/
+
+.source {
+    text-align: center;
+    margin-top: 50px;
+}
